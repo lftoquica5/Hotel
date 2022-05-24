@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>GUARDIA REAL</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,700i|Open+Sans:400,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body style="background-color: #f0b1c4;">
+    <div class="topnav">
+        <a href="index.html">GUARDIA REAL</a>
+        <a href="habs.html">HABITACIONES</a>
+        <a href="#contact">PLANES</a>
+        <a href="#about">CONTACTANOS</a>
+    </div>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="img/hotel1.jpg" style="width:100%">
+            <div class="text">SOMOS HOTEL GUARDIA REAL</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/habs.jpg" style="width:100%">
+            <div class="text">NUESTRAS HABITACIONES</div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="img/piscinas.jpeg" style="width:100%">
+            <div class="text">NUESTRA PISCINAS</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <h1 id="tituloPrincipal" class="titulo"> HOTEL GUARDIA REAL</h1>
+
+    <section>
+        <article>
+            <p class="parrafoPrincipal">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore soluta sequi beatae, libero debitis vitae, praesentium similique cumque voluptates hic commodi ipsa, sunt sint ea autem qui maxime quasi explicabo.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi tempore labore, quisquam dolore facilis nam voluptas natus voluptatem obcaecati doloribus, aperiam id soluta expedita dolor, mollitia rem illum commodi itaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nulla laudantium inventore aliquid labore incidunt quis, nihil tempora nobis aperiam nemo soluta, alias maiores, iusto nisi architecto eligendi sunt at.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut inventore officia, aspernatur id sapiente recusandae neque, quia, harum a doloremque quam. Excepturi, saepe! Odio, eligendi dolorem saepe ullam a pariatur?
+            </p>
+
+        </article>
+    </section>
+
+    <br>
+    <footer class="footer">
+        Disfruta en el regazo de la naturaleza.
+    </footer>
+
+</body>
+</html>

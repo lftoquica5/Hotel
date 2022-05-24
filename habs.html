@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HABITACIONES</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,700i|Open+Sans:400,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilo1.css">
+
+</head>
+<body style="background-color: #f0b1c4;">
+
+    <div class="topnav">
+        <a href="index.html">GUARDIA REAL</a>
+        <a href="habs.html">HABITACIONES</a>
+        <a href="#contact">PLANES</a>
+        <a href="#about">CONTACTANOS</a>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="img" src="img/hab1.jpg" style="width:100%" onclick="myFunction(this);">
+            <h1> HABITACION PRESIDENCIAL </h1>
+        </div>
+        <div class="column">
+            <img class="img" src="img/habs.jpg" style="width:100%" onclick="myFunction(this);">
+            <h1> HABITACION DOBLE </h1>
+        </div>
+        <div class="column">
+            <img class="img" src="img/hab2.png" style="width:100%" onclick="myFunction(this);">
+            <h1> HABITACION SENCILLA </h1>
+        </div>
+        <div class="column">
+            <img class="img" src="img/hab3.jpg" style="width:100%" onclick="myFunction(this);">
+            <h1> HABITACION MULTIPLE</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+
+    <script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+    </script>
+
+</body>
+</html>
